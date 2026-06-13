@@ -4,6 +4,12 @@ import sys
 from pathlib import Path
 
 import streamlit as st
+import os
+
+BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+manifest_path = os.path.join(BASE_DIR, "dsainet_demo", "demo_trials_manifest.csv")
+
+# 然后使用 manifest_path 读取文件
 
 
 APP_DIR = Path(__file__).resolve().parent

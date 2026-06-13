@@ -1,0 +1,4 @@
+dataset,class_index,class_name,correct_available,exported_trials
+ADFTD,0,healthy/control,981,3
+ADFTD,1,AD,611,3
+ADFTD,2,FTD,411,3

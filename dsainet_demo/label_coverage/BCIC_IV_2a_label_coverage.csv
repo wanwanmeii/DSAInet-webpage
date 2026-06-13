@@ -1,0 +1,5 @@
+dataset,class_index,class_name,correct_available,exported_trials
+BCIC_IV_2a,0,left hand,107,3
+BCIC_IV_2a,1,right hand,114,3
+BCIC_IV_2a,2,feet,95,3
+BCIC_IV_2a,3,tongue,96,3

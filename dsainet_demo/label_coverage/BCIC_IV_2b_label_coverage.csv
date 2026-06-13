@@ -1,0 +1,3 @@
+dataset,class_index,class_name,correct_available,exported_trials
+BCIC_IV_2b,0,left hand,225,3
+BCIC_IV_2b,1,right hand,308,3

@@ -1,0 +1,4 @@
+dataset,class_index,class_name,correct_available,exported_trials
+Zhou2016,0,left hand,123,3
+Zhou2016,1,right hand,146,3
+Zhou2016,2,feet,30,3

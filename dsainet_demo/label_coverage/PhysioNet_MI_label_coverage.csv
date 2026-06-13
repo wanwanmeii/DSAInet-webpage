@@ -1,0 +1,5 @@
+dataset,class_index,class_name,correct_available,exported_trials
+PhysioNet_MI,0,left fist,23,3
+PhysioNet_MI,1,right fist,19,3
+PhysioNet_MI,2,both fists,13,3
+PhysioNet_MI,3,both feet,11,3

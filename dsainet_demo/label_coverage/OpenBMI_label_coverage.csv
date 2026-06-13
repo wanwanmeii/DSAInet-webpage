@@ -1,0 +1,3 @@
+dataset,class_index,class_name,correct_available,exported_trials
+OpenBMI,0,right hand,192,3
+OpenBMI,1,left hand,178,3

@@ -1,0 +1,27 @@
+{
+  "source_project": "/home/mazhiyuan/QZH/archived_src/DSAINet_copy",
+  "output_root": "/home/mazhiyuan/QZH/competition_materials/dsainet_demo",
+  "datasets": [
+    "BCIC_IV_2a",
+    "OpenBMI",
+    "BCIC_IV_2b",
+    "EEGMat",
+    "PhysioNet_MI",
+    "ADFTD",
+    "Mumtaz2016",
+    "Rockhill2021",
+    "Shin2018",
+    "Zhou2016"
+  ],
+  "trials_per_class": 3,
+  "num_exported_trials": 78,
+  "files": {
+    "trial_manifest_csv": "/home/mazhiyuan/QZH/competition_materials/dsainet_demo/demo_trials_manifest.csv",
+    "forward_pass_dir": "/home/mazhiyuan/QZH/competition_materials/dsainet_demo/forward_pass",
+    "waveforms_dir": "/home/mazhiyuan/QZH/competition_materials/dsainet_demo/figures/waveforms",
+    "saliency_dir": "/home/mazhiyuan/QZH/competition_materials/dsainet_demo/figures/saliency",
+    "probabilities_dir": "/home/mazhiyuan/QZH/competition_materials/dsainet_demo/figures/probabilities",
+    "label_coverage_dir": "/home/mazhiyuan/QZH/competition_materials/dsainet_demo/label_coverage",
+    "samples_npz_dir": "/home/mazhiyuan/QZH/competition_materials/dsainet_demo/samples_npz"
+  }
+}

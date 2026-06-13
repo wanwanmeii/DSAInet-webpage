@@ -8,8 +8,22 @@ import pandas as pd
 import streamlit as st
 
 APP_DIR = Path(__file__).resolve().parents[1]
-REPO_ROOT = Path(__file__).resolve().parents[2]
-DEMO_DIR = REPO_ROOT / "dsainet_demo"
+
+
+def find_demo_dir() -> Path:
+    """Locate demo data without depending on the app's nesting depth."""
+    page_path = Path(__file__).resolve()
+    for parent in page_path.parents:
+        candidate = parent / "dsainet_demo"
+        if (candidate / "demo_trials_manifest.csv").is_file():
+            return candidate
+
+    # This repository keeps dsainet_demo beside the outer app directory.
+    return page_path.parents[3] / "dsainet_demo"
+
+
+DEMO_DIR = find_demo_dir()
+REPO_ROOT = DEMO_DIR.parent
 
 if str(APP_DIR) not in sys.path:
     sys.path.insert(0, str(APP_DIR))
@@ -113,7 +127,11 @@ st.title(tr("Interactive DSAINet Demo", "DSAINet 交互式演示"))
 st.markdown('<div class="demo-ribbon"></div>', unsafe_allow_html=True)
 
 if not (DEMO_DIR / "demo_trials_manifest.csv").exists():
-    st.error(f"Cannot find demo manifest: {DEMO_DIR / 'demo_trials_manifest.csv'}")
+    st.error(
+        f"Cannot find demo manifest: {DEMO_DIR / 'demo_trials_manifest.csv'}. "
+        "Make sure the real dsainet_demo files are committed; files beginning "
+        "with '._' are only macOS metadata and cannot be used as demo data."
+    )
     st.stop()
 
 trials = load_trials()
